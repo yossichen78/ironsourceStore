@@ -3,7 +3,6 @@ var levelup = require('levelup'),
     mailer = require("./mailer.js");
 
 exports.index = function(req, res){
-	console.log("index")
   res.sendFile('/public/index.html', { root: __dirname });
 };
 

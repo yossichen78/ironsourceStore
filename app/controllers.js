@@ -40,7 +40,6 @@ app.controller("adminCtrl", function($scope,$routeParams, $http, $location) {
     $http.get("purchases")
       .success(function (response) {
         console.log("success")
-        console.log(response)
         $scope.purchases = response;
 
       })
@@ -52,7 +51,6 @@ app.controller("adminCtrl", function($scope,$routeParams, $http, $location) {
         $http.post("mail", purchase)
             .success(function (response) {
               console.log("success");
-              console.log(response);
               alert(response);
             })
             .error(function (data, status, header) {
