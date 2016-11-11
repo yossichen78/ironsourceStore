@@ -17,7 +17,7 @@
     "watchify": "latest"
   },
   "scripts": {
-    "build-js": "browserify js/index.js > public/app.js",
-    "watch-js": "watchify js/index.js -o public/app.js"
+    "build-js": "browserify app/index.js > public/app.js",
+    "watch-js": "watchify app/index.js -o public/app.js"
   }
 }
