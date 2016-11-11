@@ -1,0 +1,19 @@
+
+
+.form-group .help-block {
+  display: none;
+}
+
+.form-group.has-error .help-block {
+  display: block;
+}
+
+a {
+	width:60px;
+}
+
+.form-container {
+	width:100%;
+	max-width:400px;
+	padding: 20px;
+}

@@ -1,0 +1,17 @@
+
+<div class="row">
+		<h3 class="col-md-10">Check out our products:</h3>
+
+    <ul class="list-unstyled col-md-10">
+        <li class="col-md-4" ng-repeat="x in products">
+        	<h3>{{x.name}}</h3>
+	        <p>{{x.description}}</p>
+
+        	<strong>{{x.price | currency : $}}</strong>
+
+       		<a class="btn btn-primary" href="/purchase/{{x.id}}">Buy</a>
+	        <img ng-src="images/{{x.image}}" width="100%">
+        </li>
+    </ul>
+</div>
+<a href='/admin'>Admin Page</a>

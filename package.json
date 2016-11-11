@@ -1,0 +1,23 @@
+{
+  "name": "IronSourceStore",
+  "version": "0.0.1",
+  "author": "Yossi Chen",
+  "description": "Test",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-router-browserify": "0.0.2",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "level": "^1.5.0",
+    "nodemailer": "^2.6.4"
+  },
+  "devDependencies": {
+    "browserify": "latest",
+    "watchify": "latest"
+  },
+  "scripts": {
+    "build-js": "browserify js/index.js > public/app.js",
+    "watch-js": "watchify js/index.js -o public/app.js"
+  }
+}

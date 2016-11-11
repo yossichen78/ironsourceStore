@@ -1,0 +1,30 @@
+
+<div class="row">
+		<h3 class="col-md-10">Purchases:</h3>
+    <ul class="list-unstyled col-md-10">
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Time</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Email</td>
+                <td>Country</td>
+                <td>Product Id</td>
+                <td>Send Mail</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in purchases">
+                <td>{{x.key | date : 'yyyy-MM-dd HH:mm:ss Z'}}</td>
+                <td>{{x.value.firstname}}</td>
+                <td>{{x.value.lastname}}</td>
+                <td>{{x.value.email}}</td>
+                <td>{{x.value.country}}</td>
+                <td>{{x.value.product}}</td>
+                <td><button class="btn btn-primary" ng-click=sendEmail(x);>Send Email</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<a href='/'>Home Page</a>

@@ -1,0 +1,46 @@
+<div class="row">
+	<div class="col-md-5">
+		<h3>Payment Page:</h3>
+	</div>	
+</div>
+<div class="row" ng-show=!product>
+	<div class="col-md-5">
+		<h3>Invalid product id</h3>
+	</div>
+</div>
+<div class="row" ng-show=product>
+	<div class="col-md-5">
+    	<h3>{{product.name}}</h3>
+        <p>{{product.description}}</p>
+    	<strong>{{product.price | currency : $}}</strong>
+        <img ng-src="images/{{product.image}}" width="100%">
+	</div>
+	<div class="col-md-5">
+		<form name="paymentForm" novalidate>
+	    	<h3>Enter your details:</h3>
+			  <div class="form-group" show-errors='{showSuccess: true}'>
+			      <label class="control-label">First Name</label>
+			      <input type="text" class="form-control" name="firstname" ng-model="user.firstname" required placeholder="First Name" />
+			      <p class="help-block" ng-if="paymentForm.firstname.$error.required">First name is required</p>
+			  </div>
+			  <div class="form-group" show-errors='{showSuccess: true}'>
+			    <label class="control-label">Last Name</label>
+			    <input type="text" class="form-control" name="lastname" ng-model="user.lastname" required placeholder="Last Name" />
+			    <p class="help-block" ng-if="paymentForm.lastname.$error.required">First name is required</p>
+			  </div>
+			   <div class="form-group" show-errors='{showSuccess: true}'>
+			    <label class="control-label">Country</label>
+			    <input type="text" class="form-control" name="country" ng-model="user.country" required placeholder="Country" />
+			    <p class="help-block" ng-if="paymentForm.country.$error.required">Country is required</p>
+			  </div>
+			  <div class="form-group" show-errors='{showSuccess: true}'>
+			    <label class="control-label">Email</label>
+			    <input type="email" class="form-control" name="email" ng-model="user.email" required placeholder="Email" />
+			    <p class="help-block" ng-if="paymentForm.email.$error.required">Email is required</p>
+			    <p class="help-block" ng-if="paymentForm.email.$error.email">The email address is invalid</p>
+			  </div>
+			  <button class="btn btn-primary" ng-click="save()">Confirm Purchase</button>
+			  <button class="btn btn-link" ng-click="reset()">Reset</button>
+		</form>
+	</div>
+</div>
