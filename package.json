@@ -18,6 +18,7 @@
   },
   "scripts": {
     "build-js": "browserify app/index.js > public/app.js",
-    "watch-js": "watchify app/index.js -o public/app.js"
+    "watch-js": "watchify app/index.js -o public/app.js",
+    "start": "npm run build-js & node server.js"
   }
 }
