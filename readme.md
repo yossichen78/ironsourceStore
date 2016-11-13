@@ -6,7 +6,7 @@ $ git clone ...
 
 $ npm install
 
-$ node server.js
+$ npm start
 
 Open http://localhost:3000/ (or edit server.js for custom port)
 
